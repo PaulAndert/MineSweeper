@@ -4,13 +4,13 @@ Eine in Typescript geschriebene Minesweeper umsetzung für die Kommandozeile
 
 ### Anforderungen
 
-@types/jest@27.5.1
-@types/node@17.0.32
-jest@28.1.0
-jetty@0.2.1
-random@3.0.6
-ts-jest@28.0.2
-typescript@4.6.4
+* @types/jest@27.5.1
+* @types/node@17.0.32
+* jest@28.1.0
+* jetty@0.2.1
+* random@3.0.6
+* ts-jest@28.0.2
+* typescript@4.6.4
 
 ```terminal
 npm -i 
