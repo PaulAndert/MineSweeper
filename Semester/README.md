@@ -26,7 +26,7 @@ npx tsc && node dist/main.js
 ```
 ausführen, das sollte MineSweeper automatisch starten lassen
 Menü:
-s - spiel starten
+\ns - spiel starten
 o - in die optionen
 q - das spiel schließen
 
