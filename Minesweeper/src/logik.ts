@@ -72,25 +72,6 @@ export function printBoard(matrix: number[][]){
         main.jetty.moveTo([i*2+3,0]).text(between);
     }
     main.jetty.moveTo([main.messageTiefe-1,0]).text(numbers);
-    /*
-    main.jetty.moveTo([0,60]).text(numbers);
-    main.jetty.moveTo([1,60]).text(between);
-    for(let i = 0; i < main.höhe; i += 1){
-        let row: string = '' + String.fromCharCode(65+i) + ' | ';
-        for(let j = 0; j < main.breite; j += 1){
-            if(main.bombenBoard[i][j] === 9) row += '\x1B[101m\x1b[30mB\x1B[0m';
-            else if (main.bombenBoard[i][j] > 0) row += main.bombenBoard[i][j];
-            else if(main.bombenBoard[i][j] === 0) row += 'X';
-            else if(main.bombenBoard[i][j] === -1) row += ' ';
-            else if(main.bombenBoard[i][j] === -2) row += '\x1B[46m\x1B[30mF\x1B[0m';
-            row += ' | ';
-        }
-        row += String.fromCharCode(65+i);
-        main.jetty.moveTo([i*2+2,60]).text(row);
-        main.jetty.moveTo([i*2+3,60]).text(between);
-    }
-    main.jetty.moveTo([main.messageTiefe-1,60]).text(numbers);
-    */
 }
 
 function end(){
@@ -122,21 +103,7 @@ export function clickField(i: number, j: number){
 export function checkWin(benutzerBoard:number[][], bombenBoard:number[][]) : boolean{
     for(let i:number = 0; i < main.höhe; i += 1){
         for(let j:number = 0; j < main.breite; j += 1){
-            if (
-                !
-                ( benutzerBoard[i][j] === bombenBoard[i][j] // if that is false -> return false
-                  || 
-                  (     (   
-                            benutzerBoard[i][j] === -2 
-                            || 
-                            benutzerBoard[i][j] === -1
-                        ) 
-                        && 
-                        bombenBoard[i][j] === 9 
-                  ) 
-                ) 
-               ) 
-                return false; // es müssen beide true sein um -> true zu returnen
+            if ( ! ( benutzerBoard[i][j] === bombenBoard[i][j] || ( ( benutzerBoard[i][j] === -2 || benutzerBoard[i][j] === -1 ) && bombenBoard[i][j] === 9 ) ) ) return false;
         }
     }
     return true;
