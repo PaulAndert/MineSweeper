@@ -1,6 +1,7 @@
 # MineSweeper
 
-Eine in Typescript geschriebene Minesweeper umsetzung für die Kommandozeile
+This project is part of the student project for the module Typescript of the TH Brandenburg in the summer semester 2022.  
+It's a command line implementation of the game Minesweeper written in typescript.
 
 ### Anforderungen
 
@@ -12,47 +13,50 @@ Eine in Typescript geschriebene Minesweeper umsetzung für die Kommandozeile
 * ts-jest@28.0.2
 * typescript@4.6.4
 
-```terminal
+download the project:
+```console
+git clone https://github.com/PaulAndert/minesweeper
+```
+
+download the dependencies
+```console
 npm -i 
 ```
-zum instalieren der Anforderungen  
 
+### Hwo do i play the game
 
-### Wie spiele ich  
-
-ins projekt navigieren und  
+navigate into the project and enter
 ```terminal
 npx tsc && node dist/main.js
 ```
-ausführen, das sollte MineSweeper automatisch starten lassen  
-Menü:  
-s - spiel starten  
-o - in die optionen  
-q - das spiel schließen  
 
-Optionen:  
-1 - Höhe  
-2 - Breite  
-3 - Bombenwahrscheinlichkeit  
-man kann die werte auf folgende weise ändern  
-\<option die verändert werden soll (1,2,3)\> \<neuer wert\>  
-z.B: 1 20 setzt die Höhe auf 20, 2 2 setzt die breite auf 2  
+this starts the game and then you have the following options 
+Menu:  
+s - start game  
+o - options  
+q - quit the game    
+  
+Options:  
+1 - height  
+2 - width  
+3 - bomb chance  
+this is how to change the values 
+\<option that should change (1,2,3)\> \<new value\>  
+example:  
+1 20 sets height to 20  
+2 2 sets width to 2  
 
-Spiel:  
-a1 -> feld a1 anklicken  
-A9 -> feld a9 anklicken  
-f b1 -> setzte eine flagge auf b1  
-f B9 -> setzte eine flagge auf b9  
-F b12 -> setzte eine flagge auf b12  
-help -> zeigt die steuerung nochmal an  
-
-
-### Empfehlungen  
-
-Optimal (nicht zwingend) ist ein terminal fenster mit den folgenden dimensionen  
-breite : >=75  
-höhe : >=13  
-um das Loginfenster nicht zu verzerren  
--> und fürs spiel ist optimal  
-breite : (spiel_breite + 1) * 4 + 1  
-höhe : (spiel_höhe + 1) * 2 + 6  
+Game: (upper or lower case is doing the same here)
+a1 -> tap the field a1 
+f b1 -> set flag on b1  
+help -> print the controls  
+  
+  
+### Recommendations
+terminal window with atleast this dimensions  
+Login window:
+width : >=75  
+height : >=13  
+Game_window:
+width : (chosen_width + 1) * 4 + 1  
+height : (chosen_height + 1) * 2 + 6  
