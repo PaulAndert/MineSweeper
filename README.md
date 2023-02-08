@@ -15,7 +15,7 @@ It's a command line implementation of the game Minesweeper written in typescript
 
 download the project:
 ```console
-git clone https://github.com/PaulAndert/minesweeper
+https://github.com/PaulAndert/MineSweeper.git
 ```
 
 download the dependencies
@@ -23,7 +23,7 @@ download the dependencies
 npm -i 
 ```
 
-### Hwo do i play the game
+### How do i play the game
 
 navigate into the project and enter
 ```terminal
